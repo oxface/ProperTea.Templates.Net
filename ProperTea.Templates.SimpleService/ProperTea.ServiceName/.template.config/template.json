@@ -1,0 +1,26 @@
+{
+  "author": "Oxface",
+  "name": "Project template for simple ProperTea service",
+  "identity": "ProperTea.SimpleService.1.0",
+  "shortName": "propertea-simple-service",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ProperTea.SimpleService",
+  "symbols": {
+    "Service name": {
+      "type": "parameter",
+      "datatype":"text",
+      "replaces": "ServiceName",
+      "fileRename": "ServiceName",
+      "description": "The service name."
+    },
+    "service-name": {
+      "type": "derived",
+      "valueSource": "Service name",
+      "replaces": "service-name",
+      "valueTransform": "kebabCase"
+    }
+  }
+}

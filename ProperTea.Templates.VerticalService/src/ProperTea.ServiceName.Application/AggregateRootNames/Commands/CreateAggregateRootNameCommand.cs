@@ -6,7 +6,7 @@ namespace ProperTea.ServiceName.Application.AggregateRootNames.Commands;
 
 public record CreateAggregateRootNameCommand : ICommand;
 
-public class CreateUserCommandHandler(
+public class CreateAggregateRootNameCommandHandler(
     IAggregateRootNameDomainService domainService,
     IUnitOfWork unitOfWork)
     : CommandHandler<CreateAggregateRootNameCommand>

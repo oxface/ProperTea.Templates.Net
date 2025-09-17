@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using ProperTea.ProperCqrs;
 using ProperTea.ServiceDefaults;
-using ProperTea.ServiceName.Api.Configuration;
-using ProperTea.ServiceName.Api.Endpoints.AggregateRootNames;
-using ProperTea.ServiceName.Infrastructure.Persistence;
+using ProperTea.ServiceName.Configuration;
+using ProperTea.ServiceName.Endpoints;
+using ProperTea.ServiceName.Persistence;
 using ProperTea.Shared.Api.ErrorHandling;
 using Scalar.AspNetCore;
 
@@ -36,14 +36,11 @@ builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
-builder.Services.AddGlobalErrorHandling("ProperTea.ServiceName.Api");
+builder.Services.AddGlobalErrorHandling("ProperTea.ServiceName");
 
 builder.Services.AddProperCqrs();
 
-builder.Services
-    .AddDomainServices()
-    .AddInfrastructureServices()
-    .AddApplicationServices();
+builder.Services.AddServices();
 
 builder.Services.AddDbContext<ServiceNameDbContext>(options =>
 {
@@ -54,7 +51,7 @@ builder.Services.AddScoped<DbContext>(provider => provider.GetRequiredService<Se
 
 var app = builder.Build();
 
-app.UseGlobalErrorHandling("ProperTea.ServiceName.Api");
+app.UseGlobalErrorHandling("ProperTea.ServiceName");
 
 if (app.Environment.IsDevelopment())
 {
@@ -67,7 +64,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapAggregateRootNameEndpoints();
+app.MapServiceNameEndpoints();
 
 app.MapDefaultEndpoints();
 

@@ -29,22 +29,22 @@ public static class ApplicationServices
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        services.AddValidatorsFromAssembly(typeof(CreateUserCommandHandler).Assembly);
+        services.AddValidatorsFromAssembly(typeof(CreateAggregateRootNameCommandHandler).Assembly);
 
         services.Scan(scan => scan
-            .FromAssemblyOf<CreateUserCommandHandler>()
+            .FromAssemblyOf<CreateAggregateRootNameCommandHandler>()
             .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<>)))
             .AsImplementedInterfaces()
             .WithTransientLifetime());
 
         services.Scan(scan => scan
-            .FromAssemblyOf<CreateUserCommandHandler>()
+            .FromAssemblyOf<CreateAggregateRootNameCommandHandler>()
             .AddClasses(classes => classes.AssignableTo(typeof(ICommandHandler<,>)))
             .AsImplementedInterfaces()
             .WithTransientLifetime());
 
         services.Scan(scan => scan
-            .FromAssemblyOf<CreateUserCommandHandler>()
+            .FromAssemblyOf<CreateAggregateRootNameCommandHandler>()
             .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>)))
             .AsImplementedInterfaces()
             .WithTransientLifetime());
