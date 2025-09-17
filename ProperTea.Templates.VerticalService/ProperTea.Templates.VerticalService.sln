@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10A92298-402D-48AB-A676-B90F5261BEF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperTea.ServiceName.Domain", "src\ProperTea.ServiceName.Domain\ProperTea.ServiceName.Domain.csproj", "{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperTea.ServiceName.Application", "src\ProperTea.ServiceName.Application\ProperTea.ServiceName.Application.csproj", "{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperTea.ServiceName.Infrastructure", "src\ProperTea.ServiceName.Infrastructure\ProperTea.ServiceName.Infrastructure.csproj", "{15470396-DF64-4606-83B4-DF9C54E21D20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProperTea.ServiceName.Api", "src\ProperTea.ServiceName.Api\ProperTea.ServiceName.Api.csproj", "{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14} = {10A92298-402D-48AB-A676-B90F5261BEF9}
+		{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77} = {10A92298-402D-48AB-A676-B90F5261BEF9}
+		{15470396-DF64-4606-83B4-DF9C54E21D20} = {10A92298-402D-48AB-A676-B90F5261BEF9}
+		{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2} = {10A92298-402D-48AB-A676-B90F5261BEF9}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5E0204-EAC0-4E4B-9333-2BB8BCA88B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3DE8B1-065A-44C3-9D8B-F0C31667FD77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15470396-DF64-4606-83B4-DF9C54E21D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15470396-DF64-4606-83B4-DF9C54E21D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15470396-DF64-4606-83B4-DF9C54E21D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15470396-DF64-4606-83B4-DF9C54E21D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F780C4-3EE6-4DB5-892F-8B336A65FFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

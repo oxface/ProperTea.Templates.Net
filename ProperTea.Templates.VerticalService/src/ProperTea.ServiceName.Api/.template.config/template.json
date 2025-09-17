@@ -1,0 +1,39 @@
+{
+  "author": "Oxface",
+  "name": "API project template for ProperTea Service",
+  "identity": "ProperTea.Service.API.1.0",
+  "shortName": "propertea-service-api",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ProperTea.Service.Api",
+  "symbols": {
+    "Service name": {
+      "type": "parameter",
+      "datatype":"text",
+      "replaces": "ServiceName",
+      "fileRename": "ServiceName",
+      "description": "The service name."
+    },
+    "Aggregate root name": {
+      "type": "parameter",
+      "datatype":"text",
+      "replaces": "AggregateRootName",
+      "fileRename": "AggregateRootName",
+      "description": "The name of the first aggregate root in the project."
+    },
+    "aggregate-root-name": {
+      "type": "derived",
+      "valueSource": "Aggregate root name",
+      "replaces": "aggregate-root-name",
+      "valueTransform": "kebabCase"
+    },
+    "service-name": {
+      "type": "derived",
+      "valueSource": "Service name",
+      "replaces": "service-name",
+      "valueTransform": "kebabCase"
+    }
+  }
+}
